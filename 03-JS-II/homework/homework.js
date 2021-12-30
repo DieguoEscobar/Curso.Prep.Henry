@@ -163,10 +163,18 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos.
-  for(i=2; i<=numero/2 ; i++){
-    if(numero%i==0){
+  //for(i=2; i<=numero/2 ; i++){
+  //  if(numero%i==0){
+  //    return false;
+  //  } 
+  //}
+  //return true;
+  if( numero < 2) return false;
+  if(numero === 2) return true;
+  for(var i = 2; i < numero; i++) {
+    if(numero % i === 0) {
       return false;
-    } 
+    }
   }
   return true;
 }
@@ -194,7 +202,12 @@ function tablaDelSeis(){
   //  return[6*Math.abs(n)];
   //  n++;
   //}
-  return [6*0,6*1,6*2,6*3,6*4,6*5,6*6,6*7,6*8,6*9,6*10]
+  let arrayTablaDel6 = [];
+  for (let i = 0; i <array.length; i++) {
+        arrayTablaDel6.push(6 * i)
+  }
+  return arrayTablaDel6;
+
 }
 
 function tieneTresDigitos(numero){
