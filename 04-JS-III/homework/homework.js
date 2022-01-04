@@ -25,11 +25,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  let incremento=[];
-  for ( let i = 0; i < array.length-1; i++) {
-         incremento=(array[i]);
+  var incremento=[];
+  for ( i = 0; i < array.length; i++) {
+         incremento[i]=array[i]+1;
   }
-   return incremento.push;
+   return incremento;
 }
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
@@ -56,6 +56,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  return palabras.join(" ");
 }
 
 
@@ -70,7 +71,6 @@ function arrayContiene(array, elemento) {
     return false;
   }
 }
-
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
@@ -109,6 +109,15 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  var producto=1;
+  if(arguments.length===0){
+    return 0;
+  }
+  for(i=0; i<arguments.length; i++){
+    producto=producto*arguments[i];
+  }
+  return producto;
+
 }
 
 
@@ -142,33 +151,27 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  var m=n.length;
-  var p=Math.pow(10,m);
-  var coeficiente = 1-(n/p);
-
-  if(coeficiente >= 0.1){
-    return true;
-  }else {
+  var sn=n.toString();
+  let contador=sn.length;
+  let p=Math.pow(10,contador);
+  let coeficiente = 1-((n)/p);
+  if (coeficiente>0 && coeficiente <= 0.1) {
+   return true;
+  }else{
     return false;
   }
 }
-
-
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí  
-  var constante=arreglo[0];
-  function iguales(numero){
-    return function(v , i , a){
-      return v>numero;
+  //Escribe tu código aquí 
+  var iguales=[]; 
+  for(i=1; i<arreglo.length; i++){
+    if(arreglo[0]!==arreglo[i]){
+      return false;
+    } else{
+      return true;
     }
-  }
-  let resultado=arreglo.filter(iguales(constante));
-  if(resultado.length+1===arreglo.length){
-    return true;
-  } else{
-    return false;
   }
 } 
 
@@ -178,21 +181,30 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-}
-
+  var nuevoArray=[];
+  for(i=0; i<array.length; i++){
+    if(array[i]==="Enero" || array[i]==="Marzo"|| array[i]==="Noviembre"){
+      nuevoArray.push(array[i]);
+      } 
+    }
+    if(nuevoArray.length<3){
+      return "No se encontraron los meses pedidos";
+    }else{
+      return nuevoArray;
+    }
+  } 
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-  function mayores(numero){
-    return function(v , i , a){
-      return v>numero;
+  var mayores=[];
+  for(i=0; i<array.length; i++){
+    if(array[i]>100){
+      mayores.push(array[i]);
     }
   }
-  let resultado=array.filter(mayores(100));
-  return resultado;
-
+  return mayores;
 }
 
 
@@ -204,8 +216,20 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var aumentados=[];
+  for(i=0; i<10; i++){
+    numero=numero+2;
+    if(numero===i){
+      break;
+    }else{
+      aumentados.push(numero);
+    } 
+  }
+  if(i<10){
+    return "Se interrumpió la ejecución";
+  }
+  return aumentados; 
 }
-
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -214,6 +238,17 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var aumentados=[];
+  for(i=0; i<10; i++){
+    numero=numero+2;
+    if(i!==4){
+      aumentados.push(numero);
+    }else{
+      numero=numero-2;
+      continue;
+    } 
+  }
+  return aumentados; 
 }
 
 
