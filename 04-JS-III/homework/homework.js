@@ -124,13 +124,20 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-  function mayores(numero){
-    return function(v , i , a){
-      return v>numero;
-    }
-  }
-  let resultado=arreglo.filter(mayores(18));
-return resultado.length;
+   //function mayores(numero){
+     //return function(v , i , a){
+     //  return v>numero;
+     //}
+   //}
+   //let resultado=arreglo.filter(mayores(18));
+ //return resultado.length;
+ var Cant=0;
+ for(i=0; i<arreglo.length; i++){
+   if(arreglo[i]>18){
+     Cant=Cant+1;
+   }
+ }
+ return Cant;
 }
 
 
@@ -165,7 +172,6 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí 
-  var iguales=[]; 
   for(i=1; i<arreglo.length; i++){
     if(arreglo[0]!==arreglo[i]){
       return false;
