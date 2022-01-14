@@ -1,0 +1,2 @@
+* prototype= Es una función de javascript que permite a los usuarios agregar nuevas propiedades a los objetos.
+* _Constructors_ (de Clases)= Es una manera en que podemos construir objetos a una clase y también nos permite crear nuevas propiedades y accerder a ellas por medio de la clase.
