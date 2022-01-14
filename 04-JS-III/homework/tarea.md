@@ -1,0 +1,1 @@
+Arrays: En javascript se utilizan una especie de matriz en la que se pueden almacenar muchos datos por lo general se guardan listas de números, string(palabras) y otras clases de datos.
