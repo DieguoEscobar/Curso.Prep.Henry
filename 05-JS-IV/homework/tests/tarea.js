@@ -1,6 +1,0 @@
-//* Objetos: Son la base del trabajo en javaScript, y son espacios de memoria en los que se pueden almacenar datos, funciones, métodos y practicamente todo lo que se puede crer en javascript. 
-//* Propiedades: Son los elementos que se encuentran dentro de los objetos.
-//* Métodos:Al definir una función dentro de un objeto, es decir que cuando una propiedad es una función lo     llamamos método.
-//* Bucle `for…in`: Es un bucle que nos permite acceder a todos los datos que tenemos en nuestro objeto, ejemplo si en el objeto se solicita nombre: "Diego", el bucle devolverá la paralbra "Diego", que se conoce como la clave de la propiedad
-//* Notación de puntos vs notación de corchetes: Los puntos se utilizan para definir la clave de una propiedad por ejemplo nombre:Diego, en cambio los corchetes se utilizan para definir objetos y funciones por lo que {nombre}:Diego no sería valido dentro de un objeto o funcion, 
-//en cambio Edad:function(fecha-nacimiento){ return date} si sería validos porque se están usando los corchetes dentro de una función.
