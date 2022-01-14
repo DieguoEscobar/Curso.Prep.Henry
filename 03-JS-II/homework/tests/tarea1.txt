@@ -1,4 +1,0 @@
-"For"= Es un ciclo repetitivo que te permite hacer operaciones para un conjunto finito de valores, por ejemplo si quisieras ver en pantalla los primeros 100 números pares podrías usar este bucle para i =1 hasta i<=100 con la fórmula 2i.
-"&&" = Es el operador lógico (AND o Y en español) arrojara que la condición es verdadera si las dos condiciones son verdaderas, en los otros casos una verdadera y otra falsa arrojará falso al igual si las dos condiciones son falsas.
-"||" = Operador lógico (or o O en español), arrojara verdadero siempre y cuando una de las condiciones sea verdadera o la totalidad de éstas.
-"!"  = Operador lógico de negación  es decir que al ponerlo antes de un operador lógico devolverá el valor lógico contrario, si se le pone antes de una expresión matemática o de comparación no realizará nada.
