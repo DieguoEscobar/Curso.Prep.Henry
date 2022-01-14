@@ -4,6 +4,8 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
+  //return  nombre.charAt(0).toUpperCase()+nombre.slice(1);
+  // slice recorre los elementos desde 1 hasta el segundo parametro y s no se específica el segundo irá hasta el final.
     var mayuscula = '';
     for(var i =1; i<nombre.length; i++) {
       mayuscula = mayuscula + nombre.charAt(i);
@@ -15,7 +17,7 @@ function mayuscula(nombre) {
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
-  return cb();
+   cb();
 }
 
 function operacionMatematica(n1, n2, cb) {
