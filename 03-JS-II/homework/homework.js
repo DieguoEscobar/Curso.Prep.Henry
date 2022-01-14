@@ -10,7 +10,7 @@ function obtenerMayor(x, y) {
   } else if (x<y){
     return y;
   } else {
-    return x;
+    return x || y;
   }
 }
 
@@ -111,7 +111,12 @@ function esEntero(numero) {
   // Ejemplo: -10 -> true
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
-  // Tu código:
+  // Tu código: 
+  // if (Number.isInteger(numero)){
+  // return true;
+  //}else{
+  // return false;
+  //}
   if(numero==0){
     return true;
   }else if(Math.floor(numero)/numero==1){
@@ -169,8 +174,12 @@ function esPrimo(numero) {
   //  } 
   //}
   //return true;
-  if( numero < 2) return false;
-  if(numero === 2) return true;
+  if( numero < 2){
+    return false;
+  } 
+  if(numero === 2){
+    return true;
+  } 
   for(var i = 2; i < numero; i++) {
     if(numero % i === 0) {
       return false;
@@ -203,7 +212,7 @@ function tablaDelSeis(){
   //  n++;
   //}
   let arrayTablaDel6 = [];
-  for (let i = 0; i <array.length; i++) {
+  for (let i = 0; i <11; i++) {
         arrayTablaDel6.push(6 * i)
   }
   return arrayTablaDel6;
@@ -224,11 +233,12 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var i=8;
+  var i=0;
   do{
-    return numero + 5*i;
-    i++;
+    i=i+1;
+    numero=numero+5;
   } while(i<8)
+  return numero;
 }
 
 
